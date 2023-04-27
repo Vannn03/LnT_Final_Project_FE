@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rajdhani', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #FFFFFF, #DCE6FF);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-block: 2em;
+}
+
+#navbar #nav-links {
+    display: flex;
+    gap: 2em;
+}
+
+#navbar #nav-links #nav-logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0.3em;
+    color: #0030B5;
+    user-select: none;
+    cursor: pointer;
+    border-right: 1px solid grey;
+    padding-right: 20px;
+}
+
+#navbar #nav-links a {
+    font-size: 20px;
+    font-weight: 500;
+    animation-name: nav-links;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+@keyframes nav-links {
+    from {margin-left: -50px; opacity: 0;}
+    to {margin-right: 0px; opacity: 1;}
+}
+
+#navbar #nav-links #rangkaian:hover {
+    font-weight: 600;
+    border-bottom: 2px solid #0030B5;
+}
+#navbar #nav-links #timeline:hover {
+    font-weight: 600;
+    border-bottom: 2px solid #0030B5;
+}
+#navbar #nav-links #registrasi:hover {
+    font-weight: 600;
+    border-bottom: 2px solid #0030B5;
+}
+
+#navbar #nav-btn #contact-us {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+}
+
+#series-sec {
+    padding-block:3em;
+}
+
+#series-sec .row {
+    display: flex;
+    gap: 5em;
+}
+
+#series-sec #grid-series .row #column-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3em;
+}
+
+#series-sec #collapse-1, #collapse-2, #collapse-3{
+    border: 2px solid grey;
+    border-radius: 8px;
+    background-color: #DCE6FF;
+}
+
+#series-sec a {
+    font-size: 20px;
+    letter-spacing: .1em;
+    font-weight: 600;
+}
+#series-sec #desc {
+    font-size: 18px;
+}
+
+#series-sec #column-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#series-sec #carouselAutoPlaying {
+    width: 800px;
+}
+#series-sec #carouselAutoPlaying img {
+    border-radius: 8px;
+}
+
+#series-sec #column-2 button {
+    color: #0030B5;
+}
+
+#timeline-sec {
+    padding: 3em;
+}
+
+#timeline-sec table thead th {
+   padding: 1em;
+   background-color: #DCE6FF;
+}
+
+#timeline-sec table th {
+    font-size: 20px;
+    letter-spacing: .1em;
+}
+
+#timeline-sec table td {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#regis-sec {
+    background-color: #494949;
+    padding: 5em;
+}
+
+#regis-sec .row {
+    display: flex;
+    gap: 5em;
+}
+
+#regis-sec .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+}
+
+@media only screen and (max-width: 768px) { 
+    #navbar #nav-links a {
+        font-size: 0;
+    }
+    
+    #navbar #nav-links #nav-logo {
+        border-right: none;
+        padding: 0;
+    }
+
+    #navbar #nav-btns #registrasi {
+        font-size: 15px;
+    }
+
+    #navbar #nav-btns #contact-us {
+        font-size: 15px;
+    }
+}

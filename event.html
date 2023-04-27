@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuddingFest</title>
+    <link rel="stylesheet" href="event.css">
+
+    <script src="https://kit.fontawesome.com/7f5f047a16.js" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script> 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+</head>
+<body>
+
+    <nav id="navbar">
+        <div id="nav-links">
+            <h1 id="nav-logo">PuddingFest</h1>
+            <a id="rangkaian" class="nav-link" href="#series-sec">Series</a>
+            <a id="timeline" class="nav-link" href="#timeline-sec">Timeline</a>
+            <a id="registrasi" class="nav-link" href="#">Registration</a>
+        </div>
+        <div id="nav-btn">
+            <button id="contact-us" class="btn btn-primary">Contact Us</button>
+        </div>
+    </nav>
+    
+    <section id="series-sec" class="m-5">
+        <div id="grid-series" class="container text-center">
+            <div class="row">
+                <div id="column-1" class="col">
+                    <div id="collapse-1">
+                        <p>
+                            <a class="btn" data-bs-toggle="collapse" href="#collapsePembuka" role="button" aria-expanded="false" aria-controls="collapsePembuka">
+                              Pembukaan Acara <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </a>
+                        </p>
+                        <div class="collapse" id="collapsePembuka">
+                            <div id="desc" class="card card-body">
+                              Acara akan diawali dengan sambutan MC yang akan menjelaskan inti dari acara ini dan memperkenalkan kelompok-kelompok representatif dari berbagai perusahaan ternama di Indonesia.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="collapse-2">
+                        <p>
+                            <a class="btn" data-bs-toggle="collapse" href="#collapsePameran" role="button" aria-expanded="false" aria-controls="collapsePameran">
+                              Pameran Teknologi <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </a>
+                        </p>
+                        <div class="collapse" id="collapsePameran">
+                            <div id="desc" class="card card-body">
+                              Masing-masing kelompok representatif akan bergiliran memamerkan teknologi terbaru melalui sebuah presentasi dan sesi Q&A.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="collapse-3">
+                        <p>
+                            <a class="btn" data-bs-toggle="collapse" href="#collapsePenutup" role="button" aria-expanded="false" aria-controls="collapsePenutup">
+                              Penutupan Acara <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </a>
+                        </p>
+                        <div class="collapse" id="collapsePenutup">
+                            <div id="desc" class="card card-body">
+                              Acara ini akan ditutup dengan sambutan MC melalui doa dan apresiasi terhadap kelompok-kelompok representatif.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="column-2" class="col">
+                    <div id="carouselAutoPlaying" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://images.pexels.com/photos/3856037/pexels-photo-3856037.jpeg?auto=compress&cs=tinysrgb&w=1600" class="d-block w-100" alt="Image.jpg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1600" class="d-block w-100" alt="Image.jpg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.pexels.com/photos/7648221/pexels-photo-7648221.jpeg?auto=compress&cs=tinysrgb&w=1600" class="d-block w-100" alt="Image.jpg">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev btn btn-secondary" type="button" data-bs-target="#carouselAutoPlaying" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next btn btn-secondary" type="button" data-bs-target="#carouselAutoPlaying" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline-sec">
+        <div class="container text-center">
+            <div class="row">
+                <div class="row">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Time</th>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Series</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <th scope="row" rowspan="7">Jumat, 5 Mei 2023</th>
+                            <tr>
+                                <td>13:00 - 13:10</td>
+                                <td>10'</td>
+                                <td>Registrasi Ulang</td>
+                            </tr>
+                            <tr>
+                                <td>13:10 - 13:15</td>
+                                <td>5'</td>
+                                <td>Pembukaan MC</td>
+                            </tr>
+                            <tr>
+                                <td>13:15 - 13:20</td>
+                                <td>5'</td>
+                                <td>Perkenalan Kelompok Representatif</td>
+                            </tr>
+                            <tr>
+                                <td>13:20 - 15:30</td>
+                                <td>120'</td>
+                                <td>Sesi Pameran</td>
+                            </tr>
+                            <tr>
+                                <td>15:30 - 15:50</td>
+                                <td>20'</td>
+                                <td>Sesi Q&A</td>
+                            </tr>
+                            <tr>
+                                <td>15:50 - 16:00</td>
+                                <td>10'</td>
+                                <td>Dokumentasi & Penutupan MC</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Time</th>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Series</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <th scope="row" rowspan="7">Sabtu, 6 Mei 2023</th>
+                            <tr>
+                                <td>13:00 - 13:10</td>
+                                <td>10'</td>
+                                <td>Registrasi Ulang</td>
+                            </tr>
+                            <tr>
+                                <td>13:10 - 13:15</td>
+                                <td>5'</td>
+                                <td>Pembukaan MC</td>
+                            </tr>
+                            <tr>
+                                <td>13:15 - 13:20</td>
+                                <td>5'</td>
+                                <td>Perkenalan Kelompok Representatif</td>
+                            </tr>
+                            <tr>
+                                <td>13:20 - 15:30</td>
+                                <td>120'</td>
+                                <td>Sesi Pameran</td>
+                            </tr>
+                            <tr>
+                                <td>15:30 - 15:50</td>
+                                <td>20'</td>
+                                <td>Sesi Q&A</td>
+                            </tr>
+                            <tr>
+                                <td>15:50 - 16:00</td>
+                                <td>10'</td>
+                                <td>Dokumentasi & Penutupan MC</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="regis-sec">
+        <form action="" class="needs-validation" novalidate>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <div class="email-form">
+                            <label for="email" class="form-label">Email</label>
+                            <div class="input-group has-validation">
+                                <input type="email" id="name" class="form-control" required>
+                                <div class="invalid-feedback">
+                                    Please Enter your Email using '@'
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="name-form">
+                            <label for="name" class="form-label">Nama</label>
+                            <div class="input-group has-validation">
+                                <input type="text" id="name" class="form-control" required>
+                                <div class="invalid-feedback">
+                                    Please Enter your Name
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="phone-form">
+                            <label for="phoneNum" class="form-label">Nomor Telepon</label>
+                            <div class="input-group has-validation">
+                                <input type="number" id="phoneNum" class="form-control" required>
+                                <div class="invalid-feedback">
+                                    Please Enter your Phone Number
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="event-form">
+                            <select class="form-select">
+                                <option value="jumat">Jumat, 5 Mei 2023</option>
+                                <option value="sabtu">Sabtu, 6 Mei 2023</option>
+                                <option value="semua">Semua</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+              </div>
+        </form>
+    </section>
+
+    <script src="event.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>

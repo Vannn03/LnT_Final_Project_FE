@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #FFFFFF, #DCE6FF);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-block: 2em;
+}
+
+#navbar #nav-logo h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0.3em;
+    color: #0030B5;
+    user-select: none;
+    cursor: pointer;
+}
+
+#navbar #nav-links #rangkaian:hover {
+    font-weight: 600;
+    border-bottom: 2px solid #0030B5;
+}
+
+#navbar #nav-links #timeline:hover {
+    font-weight: 600;
+    border-bottom: 2px solid #0030B5;
+}
+
+#navbar #nav-btns {
+    display: flex;
+    gap: 2em;
+}
+
+#navbar #nav-btns #get-started {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+}
+
+#navbar #nav-btns #contact-us {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+}
+
+#hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10em;
+    gap: 5em;
+}
+
+#hero #hero-desc {
+    display: flex;
+    flex-direction: column;
+}
+
+#hero #hero-desc #header-text #welcome-to {
+    font-size: 64px;
+    font-weight: 500;
+    letter-spacing: .2em;
+    animation-name: welcome-to;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+@keyframes welcome-to {
+    from {letter-spacing: .3em;}
+    to {letter-spacing: .2em;}
+}
+
+#hero #hero-desc #header-text #pf {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: .3em;
+    color: #0030B5;
+    animation-name: pf;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+@keyframes pf {
+    from {letter-spacing: .2em;}
+    to {letter-spacing: .3em;}
+}
+
+#hero #hero-desc p {
+    font-size: 24px;
+    letter-spacing: .05em;
+    font-weight: 400;
+    animation-name: p;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+@keyframes p {
+    from {line-height: 0em; opacity: 0;}
+    to {line-height: 1.5em; opacity: 1;}
+}
+
+#hero #hero-img {
+    width: 100%;
+    mix-blend-mode: darken;
+    user-select: none;
+}
+
+#hero #get-started {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    width: fit-content;
+}
+
+@media only screen and (max-width: 768px) { 
+    #navbar {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    #navbar #nav-logo {
+        border-bottom: 1px solid black;
+        padding-inline: 5em;
+        padding-bottom: .5em;
+    }
+    
+    #hero {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5em;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    #hero #hero-desc #header-text #welcome-to {
+        font-size: 48px;
+    }
+    #hero #hero-desc #header-text #pf {
+        font-size: 48px;
+    }
+    #hero #hero-desc p {
+        font-size: 20px;
+    }
+
+    #hero #hero-img {
+        width: 60%;
+    }
+}
