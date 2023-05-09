@@ -69,6 +69,10 @@
     letter-spacing: 0.1em;
 }
 
+#navbar #nav-btn #contact-us:hover {
+    box-shadow: 3px 3px 10px grey;
+}
+
 /* CAROUSEL */
 #carousel-imgs {
     animation-name: carousel;
@@ -102,11 +106,13 @@
 
 #series-sec h5 {
     font-size: 28px;
+    font-weight: 600;
 }
 
 #series-sec p {
     font-size: 20px;
     padding-inline: 1em;
+    font-weight: 500;
 }
 
 /* TIMELINE */
@@ -133,6 +139,10 @@
     font-size: 18px;
 }
 
+#timeline-sec #vc, #te {
+    font-weight: 500;
+}
+
 #timeline-sec #vc:hover, #te:hover {
     background-color: #1363DF;
     color: #FFFFFF;
@@ -153,6 +163,7 @@
 
 #timeline-sec #timeline-table tr {
     font-size: 20px;
+    font-weight: 500;
     text-align: center;
 }
 /* REGISTRATION */
@@ -196,41 +207,47 @@
 #regis-sec #regis-form form {
     display: flex;
     flex-direction: column;
-    gap: 1.5em;
+    gap: 2em;
 }
 
 #regis-sec #regis-form form label {
     display: flex;
     gap: .5em;
+    font-weight: 500;
 }
 
 #regis-sec #regis-form form label i {
     font-size: 20px;
 }
 
-#regis-sec #regis-form form .form-text {
-    color: #DFF6FF;
-}
-
 #regis-sec #regis-form form button {
     background-color: #DFF6FF;
     color: #06283D;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 900;
     letter-spacing: .1em;
     margin-top: .5em;
-    transition: letter-spacing .5s;
+    letter-spacing: .2em;
 }
 
 #regis-sec #regis-form form button:hover {
-    letter-spacing: .5em;
+    box-shadow: 3px 3px 10px grey;
+}
+
+#regis-sec #regis-form .invalid-feedback {
+    color: tomato;
+}
+
+#regis-sec #regis-form .valid-feedback {
+    color: lightgreen;
 }
 
 /* CREDIT */
 #credit {
     border: 1px solid #1363DF;
     background-color: #1363DF;
-    padding-top: 1em;
+    padding-top: .5em;
+    height: 2.5em;
 }
 #credit p {
     text-align: center;
